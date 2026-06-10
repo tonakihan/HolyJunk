@@ -1,5 +1,9 @@
 # Holy Junk
+> [!WARNING]
+> Current status is developing
+
 This is a marketplace for junk
+
 
 ## Launch dev server (as planed)
 1. Run docker-compose (with db)

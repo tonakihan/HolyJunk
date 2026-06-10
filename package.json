@@ -1,0 +1,44 @@
+{
+  "name": "holy-junk",
+  "private": true,
+  "license": "SSPL",
+  "author": {
+    "name": "tonakihan"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test:unit": "vitest",
+    "test:e2e": "playwright test",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.2",
+    "next": "latest",
+    "pg": "^8.21.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "server-only": "^0.0.1",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^25.9.2",
+    "@types/pg": "^8.20.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "~5.2.0",
+    "drizzle-kit": "^0.31.10",
+    "jest-environment-jsdom": "^30.4.1",
+    "jsdom": "^29.1.1",
+    "sass": "^1.100.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.6"
+  }
+}

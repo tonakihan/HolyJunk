@@ -13,11 +13,13 @@
     "test:e2e": "playwright test",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "doc": "typedoc"
   },
   "dependencies": {
     "drizzle-orm": "^0.45.2",
     "next": "latest",
+    "normalize.css": "^8.0.1",
     "pg": "^8.21.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
@@ -38,6 +40,8 @@
     "jest-environment-jsdom": "^30.4.1",
     "jsdom": "^29.1.1",
     "sass": "^1.100.0",
+    "typedoc": "^0.28.19",
+    "typedoc-theme-fresh": "^0.2.3",
     "typescript": "^6.0.3",
     "vitest": "^4.1.6"
   }

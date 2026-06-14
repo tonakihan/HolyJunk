@@ -1,0 +1,9 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["./app", "./config", "./db", "./store"],
+  "exclude": ["**/*+(test|spec|e2e).@(tsx|ts)"],
+  "excludeNotDocumented": false,
+  "entryPointStrategy": "expand",
+  "plugin": ["typedoc-theme-fresh"],
+  "theme": "fresh"
+}

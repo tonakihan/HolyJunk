@@ -53,6 +53,8 @@ node_modules/
 
 # AI
 AGENTS.md
+.ai/.agents
 
 docs
-.ai/.agents
+
+docker-compose.yml

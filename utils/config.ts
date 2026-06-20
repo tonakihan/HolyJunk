@@ -21,22 +21,22 @@ function getRequiredEnv(key: string): string {
 
 /**
  *
- * @param filePath is the path to the secret file.
+ * @param filePath is the path to the secret file relative to the project root.
  * @returns string value of the secret file.
  * @throws an error if the file is not found or cannot be read.
  * @example
  * ```ts
- * const dbSecret = await readSecretFile('./secrets/db.secret');
+ * const dbSecret = readSecretFile('db.secret');
  * ```
  * @category Utils
  */
-async function readSecretFile(filePath: string): Promise<string> {
+function readSecretFile(filePath: string): string {
   try {
-    const fullPath = path.resolve(filePath);
-    const content = await fs.promises.readFile(fullPath, "utf-8");
+    const fullPath = path.resolve(__dirname, "..", filePath);
+    const content = fs.readFileSync(fullPath, "utf-8");
     return content.trim();
   } catch (error) {
-    throw new Error(`Failed to read secret file at ${filePath}: ${error}`);
+    throw new Error(`Failed to read secret file at "@/${filePath}": ${error}`);
   }
 }
 

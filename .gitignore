@@ -58,3 +58,6 @@ AGENTS.md
 docs
 
 docker-compose.yml
+
+# DB
+drizzle

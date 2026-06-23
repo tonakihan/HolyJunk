@@ -1,6 +1,7 @@
 import "@/styles/globals.scss";
 import { Press_Start_2P, VT323 } from "next/font/google";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const pressStart = Press_Start_2P({
   weight: "400",
@@ -27,6 +28,7 @@ export default function RootLayout({
         <div className={""} aria-label="background decoration" />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

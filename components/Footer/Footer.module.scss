@@ -1,0 +1,24 @@
+@use "@/styles/_variables.scss" as *;
+
+.footer {
+    border-top: 3px solid $border;
+    background: $surface;
+    padding: 20px 65px;
+    font-family: $font-display;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    color: $accent;
+
+    &:visited {
+        color: $accent2;
+    }
+}

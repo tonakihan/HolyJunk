@@ -1,0 +1,88 @@
+@use "@/styles/_variables.scss" as *;
+
+/* Fix on hover effect (transition) */
+$nav-offset: 2px;
+
+.header {
+    font-family: $font-display;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 60px;
+    background: $surface;
+    border-bottom: 3px solid $border;
+    box-shadow: 0 4px 0 rgba($accent, 0.08);
+}
+
+.logo {
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $accent;
+}
+
+.logoAccent {
+    color: $accent2;
+    text-shadow: 3px 3px 0 rgba($accent2, 0.3);
+}
+
+.nav {
+    font-size: 11px;
+    display: flex;
+    gap: 8px;
+
+    overflow-x: auto;
+    min-width: 0;
+    padding: 0 $nav-offset $nav-offset 0;
+
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.navLink {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $muted;
+    border: 2px solid $border;
+    background: $surface;
+    transition: all 0.08s;
+
+    &:hover {
+        color: $accent;
+        border-color: $accent;
+        transform: translate($nav-offset, $nav-offset);
+        box-shadow: (-$nav-offset) (-$nav-offset) 0 $accent;
+        border: 2px solid $accent;
+    }
+
+    &.active {
+        color: $accent2;
+        border-color: $accent2;
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+
+    .nav {
+        width: 100%;
+        gap: 4px;
+        padding-bottom: 4px;
+    }
+}

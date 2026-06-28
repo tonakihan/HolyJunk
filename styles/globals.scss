@@ -11,3 +11,7 @@ body {
     background: $bg;
     color: $fg;
 }
+
+a[target="_blank"]::after {
+  content: '🡥';
+}
